@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -52,6 +53,7 @@ body {
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+	background-color: #FFFEF8;;
 }
 header {
 	display: flex;
@@ -90,12 +92,12 @@ nav ul {
 	list-style-type: none;
 
 }
+
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
 }
-
-li:hover {
+li:hover, a:hover, #nav-login:hover {
 	color: #B1663C;
 }
 #introduction {
@@ -104,6 +106,11 @@ li:hover {
 }
 #introduction figure {
 	flex: 1
+}
+
+#introduction figcaption {
+	padding-left: 10%;
+	padding-top: 13px;
 }
 #introduction img {
 	display: block;
@@ -135,7 +142,6 @@ li:hover {
 
 .gallery img {
 	width: 100%;
-
 }
 #contact {
 	width: 50%;
@@ -143,7 +149,6 @@ margin: auto;
 }
 #contact > * {
 	text-align: center;
-
 }
 #contact h2{
 	margin-bottom: 20px;
@@ -154,7 +159,6 @@ margin: auto;
 	display: flex;
 	flex-direction: column;
 }
-
 #contact input {
 	height: 50px;
 	font-size: 1.2em;
@@ -179,21 +183,18 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
-
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
-
-
 .filters {
 	display : flex;
 	justify-content : center;
 	margin-bottom: 51px;
 	gap : 10px;
-
 }
+
 .btn-filter {
 	border: 1px solid #1D6154;
 	color : #1D6154;
@@ -203,15 +204,146 @@ footer nav ul {
 	font-style : normal;
 	font-weight: 700;
 	line-height: normal;
-	border-radius : 60px; 
 	background-color : white;
 	padding: 9px 15px;
-
+	cursor: pointer;
+	border-radius : 60px; 
 }
 
 .btn-filter:hover {
 	background-color : #1D6154;
 	color: white;
 }
+.btn-modal {
+	background-color: #FFF;
+	max-width: 216px;
+	height: 38px;
+	color: #000;
+	text-align: center;
+	font-family: Work sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	padding: 11px;
+	border-radius : 60px; 
+}
 
-
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+#nav-login {
+	color: #000;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+#footer-login a:visited {
+	color: #000;
+}
+#container-login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap : 37px;
+	margin-top: 155px;
+}
+#login-form {
+	display: flex;
+    flex-direction: column;
+}
+.container-login-input {
+	display: flex;
+	flex-direction: column;
+}
+label[for="password"], label[for="email"] {
+	color: #3D3D3D;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+label[for="password"] {
+	margin-bottom: 6px;
+	margin-top: 30px;
+}
+lable[for="email"] {
+	margin-bottom: 7px;
+}
+#password, #email {
+	width: 379px;
+	height: 51px;
+	flex-shrink: 0;
+	border: transparent;
+	background: #FFF;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+}
+#lost-password {
+	text-decoration:underline;
+	color: #3D3D3D;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration-line: underline;
+	margin-bottom: 355px ;
+}
+#footer-login  {
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	height: 60px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+}
+#footer-login a {
+	color: #000;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+/* CSS for modal */ 
+.modal {
+	/*display: none;*/
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-edition-mod {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap : 21px;
+	background-color: #000;
+	padding: 20px auto;
+	width: 100%;
+	height: 59px;
+	
+  }
+  .edition-mod {
+	color : #FFF;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+  }
